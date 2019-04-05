@@ -2,7 +2,7 @@
 *Files to look at*:
 
 * [MainWindow.xaml](./CS/NullTextInActiveEditor/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/NullTextInActiveEditor/MainWindow.xaml))
-* [MainWindow.xaml.cs](./CS/NullTextInActiveEditor/MainWindow.xaml.cs) (VB: [MainWindow.xaml](./VB/NullTextInActiveEditor/MainWindow.xaml))
+* [MainWindow.xaml.cs](./CS/NullTextInActiveEditor/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/NullTextInActiveEditor/MainWindow.xaml.vb))
 <!-- default file list end -->
 # How to make an editor show NullText even if it has focus
 
