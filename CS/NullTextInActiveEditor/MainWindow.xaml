@@ -1,31 +1,17 @@
-<Window x:Class="NullTextInActiveEditor.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="244" Width="290" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors">
-    <Grid>
-        <dxe:TextEdit HorizontalAlignment="Left" Margin="67,40,0,0" Name="textEdit1" VerticalAlignment="Top" Width="132" NullText="Enter text" ShowNullText="False"  Height="22" FontSize="12">
-            <dxe:TextEdit.Resources>
-                <VisualBrush x:Key="NullTextBrush" AlignmentX="Left" Stretch="None">
-                    <VisualBrush.Visual>
-                        <Border BorderThickness="2" BorderBrush="Transparent">
-                            <TextBlock Opacity="0.6" Text="{Binding Path=NullText, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type dxe:TextEdit}}}" FontSize="{Binding Path=FontSize, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type dxe:TextEdit}}}" />
-                        </Border>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </dxe:TextEdit.Resources>
-            <dxe:TextEdit.Style>
-                <Style TargetType="{x:Type dxe:TextEdit}">
-                    <Style.Triggers>
-                        <Trigger Property="Text" Value="{x:Null}">
-                            <Setter Property="Background" Value="{StaticResource NullTextBrush}" />
-                        </Trigger>
-                        <Trigger Property="Text" Value="">
-                            <Setter Property="Background" Value="{StaticResource NullTextBrush}" />
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </dxe:TextEdit.Style>
-        </dxe:TextEdit>
-        <dxe:TextEdit HorizontalAlignment="Left" Margin="67,137,0,0" Name="textEdit2" VerticalAlignment="Top" Width="132" NullText="Enter text"/>
-    </Grid>
+<Window
+    x:Class="NullTextInActiveEditor.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+    Title="MainWindow"
+    Width="290"
+    Height="244">
+
+    <dxe:TextEdit
+        Width="200"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        NullText="Enter text"
+        ShowNullTextIfFocused="True" />
+
 </Window>
